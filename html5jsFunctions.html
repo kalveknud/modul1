@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 2px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+/* Mediatag makes style happen if condition is true - her skjermvidde under 600px og endringer i grid-items */
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightgreen;
+   }
+   .grid-item {
+  padding: 10px;
+  font-size: 10px;
+  text-align: left;
+}
+}
+
+</style>
+</head>
+<body>
+
+<h1>Grid Elements</h1>
+<p>A Grid Layout must have a parent element with the <em>display</em> property set to <em>grid</em> or <em>inline-grid</em>.</p>
+
+<p>Direct child element(s) of the grid container automatically becomes grid items jåda.</p>
+
+<div class="grid-container">
+<div class="grid-item">grid item no. 1</div>
+<div class="grid-item">2</div>
+<div class="grid-item">3</div>  
+<div class="grid-item">4</div>
+<div class="grid-item">5</div>
+<div class="grid-item">6</div>  
+<div class="grid-item">7</div>
+<div class="grid-item">8</div>
+<div class="grid-item">grid item no. 9</div>  
+</div>
+
+
+<!-- making clickable heading inline javascript action-->
+<h1 onclick="alert('ShowAlertByClick!');">Clickbar heading</h1>
+<h2 onclick="clickfunction()">Clickbar heading kaller clickfunction</h2>
+
+<!-- show simple alert -->
+<script>
+    alert('ShowAlert!');
+    </script>
+
+<!-- making javascript function to group actions-->
+<script>
+function clickfunction(){
+    alert('ShowAlertByClick1!');
+    alert('ShowAlertByClick2!');
+    alert('ShowAlertByClick3!');
+}
+</script>
+
+<h3 onclick="endretekst()">Clickbar heading kaller endretekst i neste heading</h3>
+<h3 id="overskrift" >Gammel tekst</h3>
+
+<!-- changing text on heading h3 with id overskrift above  -->
+<script>
+function endretekst(){
+    document.getElementById('overskrift').innerHTML += 'Endret tekst!' ;
+}
+</script>
+
+<h4 onclick="endrestyle()">Clickbar heading kaller endrestyle i neste heading</h4>
+<h4 id="overskrift4" >Gammel style</h4>
+
+<!-- changing text on heading h3 with id overskrift above  -->
+<script>
+    function endrestyle(){
+        document.getElementById('overskrift4').style.backgroundColor = 'Red' ;
+    }
+    </script>
+
+
+<!-- ggg  -->
+<h3 onclick="dowhenpushed(this)">Clickbar heading kaller dowhenpushed funct med self (this) som input</h3>
+<script>
+    function dowhenpushed(pushedelement){
+        pushedelement.innerHTML = 'vismeg!';
+    }
+    </script>
+
+
+
+</body>
+</html>
