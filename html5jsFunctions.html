@@ -88,15 +88,18 @@ function endretekst(){
     </script>
 
 
-<!-- ggg  -->
+<!-- func med parameter - her sender vi elementet inn og bytter ut hele teksten  -->
 <h3 onclick="dowhenpushed(this)">Clickbar heading kaller dowhenpushed funct med self (this) som input</h3>
 <script>
     function dowhenpushed(pushedelement){
-        pushedelement.innerHTML = 'vismeg!';
+        pushedelement.innerHTML = pushedelement.innerHTML + ' ....heading fikk lagt på ny tekst etter klikk!';
+        console.log('I function dowhenpushed');
     }
     </script>
 
-
+<script>
+    console.log('logger på random sted');
+</script>
 
 </body>
 </html>
