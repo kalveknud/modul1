@@ -56,6 +56,7 @@
 <!-- show simple alert -->
 <script>
     alert('ShowAlert!');
+    var antallklikk = 0;
     </script>
 
 <!-- making javascript function to group actions-->
@@ -70,10 +71,13 @@ function clickfunction(){
 <h3 onclick="endretekst()">Clickbar heading kaller endretekst i neste heading</h3>
 <h3 id="overskrift" >Gammel tekst</h3>
 
+
 <!-- changing text on heading h3 with id overskrift above  -->
 <script>
 function endretekst(){
     document.getElementById('overskrift').innerHTML += 'Endret tekst!' ;
+    antallklikk = antallklikk + 1;
+    console.log('I function endretekst - antall klikk er:' + antallklikk );
 }
 </script>
 
